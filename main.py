@@ -8,7 +8,7 @@ to_learn = {}
 
 try:
     data = pandas.read_csv("data/french_words.csv")
-except:
+except FileNotFoundError:
     original_data = pandas.read_csv("data/french_words.csv")
     to_learn = original_data.to_dict(orient="record")
 else:
